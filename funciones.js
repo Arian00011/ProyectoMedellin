@@ -1,8 +1,7 @@
-// funciones.js
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Lógica del Carrusel de Fondo en la Sección de Inicio ---
+    //Carrusel de Fondo en la Sección de Inicio
     const backgroundImages = document.querySelectorAll('.background-carousel img');
     let currentBackgroundIndex = 0;
 
@@ -17,13 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(showNextBackgroundImage, 7000);
     }
 
-    // --- Lógica para Inicializar Múltiples Carruseles (Movilidad y Cultura) ---
-    // Seleccionamos todos los contenedores de carrusel
+    //carruseles
     const allCarouselContainers = document.querySelectorAll('.carousel-container');
 
     allCarouselContainers.forEach(container => {
         const carouselSlide = container.querySelector('.carousel-slide');
-        if (!carouselSlide) return; // Si no hay slide dentro del contenedor, salta
+        if (!carouselSlide) return; 
 
         const images = carouselSlide.querySelectorAll('img');
         const prevBtn = container.querySelector('.carousel-btn.prev');
@@ -32,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let counter = 0;
         let slideWidth = carouselSlide.clientWidth;
 
-        // Asegura que al cargar, la primera imagen esté bien posicionada
+
         carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
 
-        // Manejador para el botón "Siguiente"
+        // Botón "Siguiente"
         nextBtn.addEventListener('click', () => {
             if (counter >= images.length - 1) {
                 counter = 0;
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
         });
 
-        // Manejador para el botón "Anterior"
+        // Botón "Anterior"
         prevBtn.addEventListener('click', () => {
             if (counter <= 0) {
                 counter = images.length - 1;
@@ -55,9 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
         });
 
-        // Maneja el redimensionamiento de la ventana para ajustar la posición del carrusel
         window.addEventListener('resize', () => {
-            slideWidth = carouselSlide.clientWidth; // Recalcula el ancho del slide
+            slideWidth = carouselSlide.clientWidth; 
             carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
         });
 
@@ -79,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         carouselSlide.addEventListener('mouseleave', startAutoSlide);
     });
 
-    // --- Lógica del Carrito de Compra Desplegable ---
+    //Lógica del Carrito de Compra Desplegable
     const cartButton = document.getElementById('cart-button');
     const cartDropdown = document.getElementById('cart-dropdown');
     const cartCountSpan = document.getElementById('cart-count');

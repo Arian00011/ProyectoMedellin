@@ -53,16 +53,16 @@ nav a:hover {
     color: var(--naranja);
 }
 
-/* --- Estilos para la Sección de Inicio con Carrusel de Fondo --- */
+
 #inicio {
-    padding: 0; /* Eliminamos el padding directo aquí */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    overflow: hidden; /* Muy importante para ocultar partes de las imágenes */
-    position: relative; /* Necesario para posicionar las imágenes y el contenido */
-    display: flex; /* Para centrar el contenido fácilmente */
+    padding: 0; 
+    height: 100vh; 
+    overflow: hidden; 
+    position: relative;
+    display: flex; 
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Asegura que el contenido se centre bien */
+    flex-direction: column; 
 }
 
 .background-carousel {
@@ -75,15 +75,15 @@ nav a:hover {
 }
 
 .background-carousel img {
-    position: absolute; /* Para superponer */
+    position: absolute; /* Superponer */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para que la imagen cubra todo el espacio sin distorsión */
-    opacity: 0; /* Por defecto, todas ocultas */
-    transition: opacity 1.5s ease-in-out; /* Transición suave entre imágenes */
-    filter: brightness(60%); /* Oscurece las imágenes para que el texto sea más legible */
+    object-fit: cover; 
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; 
+    filter: brightness(60%); 
 }
 
 .background-carousel img.active {
@@ -155,8 +155,8 @@ section:nth-of-type(even) { /* Usa nth-of-type para seleccionar secciones en el 
 .seccion h2 {
     color: var(--naranja);
     font-size: 2.5rem; /* Tamaño de título de sección unificado */
-    margin-bottom: 1.5rem; /* Espaciado unificado */
-    text-align: center; /* Centrar títulos de sección */
+    margin-bottom: 1.5rem; 
+    text-align: center;
     width: 100%; /* Asegura que el h2 ocupe todo el ancho en una sección flex */
 }
 
