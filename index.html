@@ -1,100 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medellín - Ciudad Innovadora</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medellín - Ciudad Innovadora</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">Medellín</div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#historia">Historia</a>
-      <a href="#movilidad">Movilidad</a>
-      <a href="#economia">Economía</a>
-      <a href="#cultura">Cultura</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">Medellín</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">Historia</a>
+            <a href="#movilidad">Movilidad</a>
+            <a href="#economia">Economía</a>
+            <a href="#cultura">Cultura</a>
+            <button id="cart-button" class="cart-link">
+                Carrito (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+    </header>
 
-  <section id="inicio">
-    <h1>Bienvenidos a Medellín</h1>
-    <p>La ciudad de la eterna primavera, donde Medellín es un hub de innovación y emprendimiento. Con centros como Ruta N y múltiples zonas francas, la ciudad impulsa el desarrollo económico y la tecnología..</p>
-  </section>
+    <div id="cart-dropdown" class="cart-dropdown">
+        <h3>Tu Carrito</h3>
+        <div id="cart-items-list">
+            <p>Tu carrito está vacío.</p>
+        </div>
+        <button id="clear-cart-btn" class="clear-cart-btn">Vaciar Carrito</button>
+        <button id="close-cart-btn" class="close-cart-btn">Cerrar</button>
+    </div>
 
-  <section id="historia" class="seccion fila">
-    <div class="texto">
-      <h2>Historia de Medellín</h2>
-      <p>Medellín fue fundada en 1616 como un pequeño poblado llamado San Lorenzo de Aburrá. Con el tiempo, se consolidó como una de las ciudades más importantes de Colombia. Hoy en día es un referente de transformación urbana e innovación social.</p>
-    </div>
-    <div class="imagen">
-      <img src="imagenes/historia.jpg" alt="Historia de Medellín">
-    </div>
-  </section>
-  <section class="seccion centrado">
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/R2nGisFotXM?si=B_TTDSAiwr3hcFM2"
-      title="YouTube video player" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen></iframe>
-  </div>
-</section>
-  <section id="movilidad" class="seccion fila-inversa">
-    <div class="texto">
-      <h2>Movilidad e Infraestructura</h2>
-      <p>Medellín cuenta con un sistema de transporte integrado que incluye metro, metrocable, tranvía y buses eléctricos. Es pionera en Latinoamérica por sus soluciones sostenibles y accesibles.</p>
-    </div>
-    <div class="imagen">
-      <img src="imagenes/movilidad.jpeg" alt="Transporte en Medellín">
-    </div>
-  </section>
- 
+    <section id="inicio">
+        <div class="background-carousel">
+            <img src="medellin_inicio_1.jpg" alt="Vistas de Medellín">
+            <img src="medellin_inicio_2.jpg" alt="Vistas de Medellín">
+            <img src="medellin_inicio_3.jpeg" alt="Vistas de Medellín">
+            <img src="medellin_2.jpeg" alt="vistas de Medellín">
+        </div>
+        <div class="inicio-content">
+            <h1>Bienvenidos a Medellín</h1>
+            <p>La ciudad de la eterna primavera, donde Medellín es un hub de innovación y emprendimiento. Con centros como Ruta N y múltiples zonas francas, la ciudad impulsa el desarrollo económico y la tecnología.</p>
+        </div>
+    </section>
 
-  <section id="Ruta N" class="seccion">
-    <div class="imagen-con-titulo">
-      <img src="imagenes/economia.jpeg" alt="Economía de Medellín">
-      <div class="titulo-sobre-imagen">Economía y Desarrollo</div>
-    </div>
-    <div class="texto centrado">
-      <p>Su propósito es consolidar a Medellín como el epicentro global de CTI + E acelerando su desarrollo económico y social. 
-    En noviembre de 2009 se constituyó legalmente la Corporación Ruta N Medellín, formada por Empresas Públicas de Medellín (EPM), UNE Telecomunicaciones y el Municipio de Medellín, con una estrategia de ciudad basada en la innovación y el desarrollo tecnológico para potenciar la competitividad de Medellín.</p>
-    </div>
-  </section>
+    <section id="historia" class="seccion fila">
+        <div class="texto">
+            <h2>Historia de Medellín</h2>
+            <p>Medellín fue fundada en 1616 como un pequeño poblado llamado San Lorenzo de Aburrá. Con el tiempo, se consolidó como una de las ciudades más importantes de Colombia. Hoy en día es un referente de transformación urbana e innovación social.</p>
+        </div>
+        <div class="imagen">
+            <img src="historia.jpg" alt="Historia de Medellín">
+        </div>
+    </section>
+    <section class="seccion centrado">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/R2nGisFotXM?si=TO0A-jeIAP6VmcVP"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.990614738715!2d-75.5693871251964!3d6.264963693723704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428e695083c29%3A0x99f177323f8c67d5!2sRuta%20N!5e0!3m2!1ses-419!2sco!4v1749161272515!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section id="movilidad" class="seccion fila-inversa">
+        <div class="texto">
+            <h2>Movilidad e Infraestructura</h2>
+            <p>Medellín cuenta con un sistema de transporte integrado que incluye metro, metrocable, tranvía y buses eléctricos. Es pionera en Latinoamérica por sus soluciones sostenibles y accesibles.</p>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="metro.jpeg" alt="Metro de Medellín">
+                <img src="tren.jpeg" alt="Tren de Cercanías o Tranvía de Medellín">
+                <img src="aeropuerto.jpeg" alt="Aeropuerto José María Córdova, Medellín">
+                <img src="teleferico.jpeg" alt="Metrocable de Medellín">
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+        </div>
+    </section>
 
-  <section id="cultura" class="seccion fila">
-    <div class="texto">
-      <h2>Cultura y Turismo</h2>
-      <p>Desde la Feria de las Flores hasta el Museo de Antioquia, Medellín vibra con arte, historia y tradición. Sus parques, grafitis y gastronomía enamoran a locales y visitantes.</p>
-    </div>
-    <div class="imagen">
-      <img src="imagenes/cultura.jpg" alt="Cultura de Medellín">
-    </div>
-  </section>
+    <section id="economia" class="seccion">
+        <h2>Recorridos Ofertados</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="ruta N.jfif" alt="Ruta N">
+                <h3>Ruta N</h3>
+                <p>Su propósito es consolidar a Medellín como el epicentro global de CTI + E acelerando su desarrollo económico y social. En noviembre de 2009 se constituyó legalmente la Corporación Ruta N Medellín, formada por Empresas Públicas de Medellín (EPM), UNE Telecomunicaciones y el Municipio de Medellín, con una estrategia de ciudad basada en la innovación y el desarrollo tecnológico para potenciar la competitividad de Medellín.</p>
+                <button class="add-to-cart-btn" data-product-id="ruta-n" data-product-name="Ruta N">Agregar al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="comuna13.jpeg" alt="Comuna 13 Tour">
+                <h3>Comuna 13</h3>
+                <p>La Comuna 13 de Medellín, un ejemplo de transformación social, es famosa por sus vibrantes grafitis, escaleras eléctricas al aire libre y la resiliencia de su gente. Un tour por sus calles ofrece una perspectiva única de la cultura urbana y la historia de la ciudad.</p>
+                <button class="add-to-cart-btn" data-product-id="comuna-13-tour" data-product-name="Tour Comuna 13">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Contacto</h3>
-        <p>Alcaldía de Medellín</p>
-        <p>Tel: +57 4 444 41 44</p>
-      </div>
-      <div class="footer-section">
-        <h3>Redes Sociales</h3>
-        <a href="#">Facebook</a><br>
-        <a href="#">Instagram</a><br>
-        <a href="#">Twitter</a>
-      </div>
-      <div class="footer-section">
-        <h3>Ubicación</h3>
-        <p>Medellín, Antioquia, Colombia</p>
-      </div>
-    </div>
-    <div class="footer-copy">
-      &copy; 2025 Medellín. Todos los derechos reservados.
-    </div>
-  </footer>
+    <section id="cultura" class="seccion fila">
+        <div class="texto">
+            <h2>Cultura y Turismo</h2>
+            <p>Desde la Feria de las Flores hasta el Museo de Antioquia, Medellín vibra con arte, historia y tradición. Sus parques, grafitis y gastronomía enamoran a locales y visitantes.</p>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="medellin_2.jpeg" alt="Medellín Cultural 1">
+                <img src="comuna13.jpeg" alt="Medellín Cultural 2">
+                <img src="comuna13_3.jpeg" alt="Medellín Cultural 3">
+                <img src="ruta N_2.jpeg" alt="Medellín Cultural 4">
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Agente</p>
+                <p>Tel: +57 311 555 753</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <a href="#">Facebook</a><br>
+                <a href="#">Instagram</a><br>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p>Medellín, Antioquia, Colombia</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126914.93922312674!2d-75.64294474728557!3d6.241584666579895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428ea4e672722%3A0x44274c43141f2373!2sMedellin%2C%20Antioquia!5e0!3m2!1sen!2sco!4v1700000000000!5m2!1sen!2sco" 
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            © 2025 Medellín. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="funciones.js"></script>
 </body>
 </html>
